@@ -5,7 +5,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="js继承, little-tiger">
-    <meta name="description" content="js继承继承可以使子类具有父类的各种方法和属性1234567891011//父类function Father(){	this.name =  &#34;tom&#34;;	this.arr = [1,2]	thi.say = function(){		c">
+    <meta name="description" content="js继承继承可以使子类具有父类的各种方法和属性//父类
+function Father(){
+    this.name =  &#34;tom&#34;;
+    this.arr = [1,2]
+    thi.say = function(){
+  ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -389,7 +394,7 @@
                     <div class="article-tag">
                         
                             <a href="/tags/JavaScript/">
-                                <span class="chip bg-color">-JavaScript</span>
+                                <span class="chip bg-color">JavaScript</span>
                             </a>
                         
                     </div>
@@ -401,7 +406,7 @@
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
                             <a href="/categories/JavaScript/" class="post-category">
-                                -JavaScript
+                                JavaScript
                             </a>
                         
                     </div>
@@ -420,10 +425,20 @@
                 
 
                 
-
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    292
+                </div>
                 
 
                 
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
         <hr class="clearfix">
@@ -434,14 +449,64 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="js继承"><a href="#js继承" class="headerlink" title="js继承"></a>js继承</h1><h5 id="继承可以使子类具有父类的各种方法和属性"><a href="#继承可以使子类具有父类的各种方法和属性" class="headerlink" title="继承可以使子类具有父类的各种方法和属性"></a>继承可以使子类具有父类的各种方法和属性</h5><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//父类</span><br><span class="line">function Father(){</span><br><span class="line">	this.name =  "tom";</span><br><span class="line">	this.arr = [1,2]</span><br><span class="line">	thi.say = function(){</span><br><span class="line">		console.log("say");</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line">Father.prototype.eat = function(){</span><br><span class="line">	console.log("eat")</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="原型链继承"><a href="#原型链继承" class="headerlink" title="原型链继承"></a>原型链继承</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function father(){</span><br><span class="line">	this.name = name || tom;</span><br><span class="line">	thi.say = function(){</span><br><span class="line">		console.log("say");</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line">function child(){</span><br><span class="line">	this.age  = “18”</span><br><span class="line">}</span><br><span class="line">//父类的实例作为子类的原型</span><br><span class="line">child.prototype = new father();</span><br><span class="line">let c1 = new Child();</span><br><span class="line">let c2 = new Child();</span><br><span class="line">c1.push(3);</span><br><span class="line">实例化原型对象的属性是引用类型时，会公用一个内存空间(数据污染)</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="构造函数继承"><a href="#构造函数继承" class="headerlink" title="构造函数继承"></a>构造函数继承</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 利用call改变this指向</span><br><span class="line">function Child(){</span><br><span class="line">	Father.call(this);</span><br><span class="line">	this.age = "18";</span><br><span class="line">}</span><br><span class="line">let c1 = new Child();</span><br><span class="line">c1只能继承Father本身的属性和方法 不能继承Father原型对象上的属性和方法</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="组合继承"><a href="#组合继承" class="headerlink" title="组合继承"></a>组合继承</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//结合原型链继承和构造函数继承</span><br><span class="line">Child.prototype = new Father()</span><br><span class="line">function Child(){</span><br><span class="line">	Father.call(this);</span><br><span class="line">	this.age = "18"</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
+                <h1 id="js继承"><a href="#js继承" class="headerlink" title="js继承"></a>js继承</h1><h5 id="继承可以使子类具有父类的各种方法和属性"><a href="#继承可以使子类具有父类的各种方法和属性" class="headerlink" title="继承可以使子类具有父类的各种方法和属性"></a>继承可以使子类具有父类的各种方法和属性</h5><pre><code class="js">//父类
+function Father(){
+    this.name =  "tom";
+    this.arr = [1,2]
+    thi.say = function(){
+        console.log("say");
+    }
+}
+Father.prototype.eat = function(){
+    console.log("eat")
+}
+</code></pre>
+<h3 id="原型链继承"><a href="#原型链继承" class="headerlink" title="原型链继承"></a>原型链继承</h3><pre><code class="js">function father(){
+    this.name = name || tom;
+    thi.say = function(){
+        console.log("say");
+    }
+}
+function child(){
+    this.age  = “18”
+}
+//父类的实例作为子类的原型
+child.prototype = new father();
+let c1 = new Child();
+let c2 = new Child();
+c1.push(3);
+实例化原型对象的属性是引用类型时，会公用一个内存空间(数据污染)
+</code></pre>
+<h3 id="构造函数继承"><a href="#构造函数继承" class="headerlink" title="构造函数继承"></a>构造函数继承</h3><pre><code class="js">// 利用call改变this指向
+function Child(){
+    Father.call(this);
+    this.age = "18";
+}
+let c1 = new Child();
+c1只能继承Father本身的属性和方法 不能继承Father原型对象上的属性和方法
+</code></pre>
+<h3 id="组合继承"><a href="#组合继承" class="headerlink" title="组合继承"></a>组合继承</h3><pre><code>//结合原型链继承和构造函数继承
+Child.prototype = new Father()
+function Child(){
+    Father.call(this);
+    this.age = "18"
+}
+//会实例化开两次父类对象 造成性能上的浪费
+</code></pre>
+<h3 id="组合继承-优化"><a href="#组合继承-优化" class="headerlink" title="组合继承(优化)"></a>组合继承(优化)</h3><pre><code>Child,prototype = Father.prototype
+Child,prototype.constructor = Child()
+function Child(){
+    Father.call(this);
+    this.age = "18"
+}
+//实例化只调用一次 但是父类和子类的constructor指向同一处
+</code></pre>
+<h3 id="组合继承-再优化"><a href="#组合继承-再优化" class="headerlink" title="组合继承(再优化)"></a>组合继承(再优化)</h3><pre><code>Child,prototype = Object.create(Father.prototype)
+function Child(){
+    Father.call(this);
+    this.age = "18"
+}
+</code></pre>
 
                 
             </div>
@@ -507,7 +572,7 @@
                         <div class="article-tag">
                             
                                 <a href="/tags/JavaScript/">
-                                    <span class="chip bg-color">-JavaScript</span>
+                                    <span class="chip bg-color">JavaScript</span>
                                 </a>
                             
                         </div>
@@ -708,7 +773,7 @@
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
                             <a href="/categories/JavaScript/" class="post-category">
-                                    -JavaScript
+                                    JavaScript
                                 </a>
                             
                             
@@ -720,7 +785,7 @@
                 <div class="card-action article-tags">
                     
                     <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">-JavaScript</span>
+                        <span class="chip bg-color">JavaScript</span>
                     </a>
                     
                 </div>
@@ -889,6 +954,18 @@
 </main>
 
 
+
+
+<script type="text/javascript" src="/source/libs/prism/codeBlock/codeBlockFuction.js.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/source/libs/prism/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/source/libs/prism/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/source/libs/prism/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/source/libs/prism/codeBlock/codeShrink.js"></script> 
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
 
 
     <!-- <footer class="page-footer bg-color">
