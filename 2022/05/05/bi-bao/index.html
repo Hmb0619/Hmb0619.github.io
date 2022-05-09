@@ -4,13 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="js继承, little-tiger">
-    <meta name="description" content="js继承继承可以使子类具有父类的各种方法和属性//父类
-function Father(){
-    this.name =  &#34;tom&#34;;
-    this.arr = [1,2]
-    thi.say = function(){
-  ">
+    <meta name="keywords" content="闭包, little-tiger">
+    <meta name="description" content="闭包有权访问另一个函数的变量被称为闭包">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +17,7 @@ function Father(){
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>js继承 | little-tiger</title>
+    <title>闭包 | little-tiger</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -272,12 +267,12 @@ function Father(){
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">js继承</h1>
+                    <h1 class="description center-align post-title">闭包</h1>
                 </div>
             </div>
         </div>
@@ -418,7 +413,7 @@ function Father(){
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-20
+                    2022-05-05
                 </div>
                 
 
@@ -427,7 +422,7 @@ function Father(){
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    292
+                    19
                 </div>
                 
 
@@ -449,65 +444,7 @@ function Father(){
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="js继承"><a href="#js继承" class="headerlink" title="js继承"></a>js继承</h1><h5 id="继承可以使子类具有父类的各种方法和属性"><a href="#继承可以使子类具有父类的各种方法和属性" class="headerlink" title="继承可以使子类具有父类的各种方法和属性"></a>继承可以使子类具有父类的各种方法和属性</h5><pre><code class="js">//父类
-function Father(){
-    this.name =  "tom";
-    this.arr = [1,2]
-    thi.say = function(){
-        console.log("say");
-    }
-}
-Father.prototype.eat = function(){
-    console.log("eat")
-}
-</code></pre>
-<h3 id="原型链继承"><a href="#原型链继承" class="headerlink" title="原型链继承"></a>原型链继承</h3><pre><code class="js">function father(){
-    this.name = name || tom;
-    thi.say = function(){
-        console.log("say");
-    }
-}
-function child(){
-    this.age  = “18”
-}
-//父类的实例作为子类的原型
-child.prototype = new father();
-let c1 = new Child();
-let c2 = new Child();
-c1.push(3);
-实例化原型对象的属性是引用类型时，会公用一个内存空间(数据污染)
-</code></pre>
-<h3 id="构造函数继承"><a href="#构造函数继承" class="headerlink" title="构造函数继承"></a>构造函数继承</h3><pre><code class="js">// 利用call改变this指向
-function Child(){
-    Father.call(this);
-    this.age = "18";
-}
-let c1 = new Child();
-c1只能继承Father本身的属性和方法 不能继承Father原型对象上的属性和方法
-</code></pre>
-<h3 id="组合继承"><a href="#组合继承" class="headerlink" title="组合继承"></a>组合继承</h3><pre><code>//结合原型链继承和构造函数继承
-Child.prototype = new Father()
-function Child(){
-    Father.call(this);
-    this.age = "18"
-}
-//会实例化开两次父类对象 造成性能上的浪费
-</code></pre>
-<h3 id="组合继承-优化"><a href="#组合继承-优化" class="headerlink" title="组合继承(优化)"></a>组合继承(优化)</h3><pre><code>Child,prototype = Father.prototype
-Child,prototype.constructor = Child()
-function Child(){
-    Father.call(this);
-    this.age = "18"
-}
-//实例化只调用一次 但是父类和子类的constructor指向同一处
-</code></pre>
-<h3 id="组合继承-再优化"><a href="#组合继承-再优化" class="headerlink" title="组合继承(再优化)"></a>组合继承(再优化)</h3><pre><code>Child,prototype = Object.create(Father.prototype)
-function Child(){
-    Father.call(this);
-    this.age = "18"
-}
-</code></pre>
-
+                <h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><h5 id="有权访问另一个函数的变量被称为闭包"><a href="#有权访问另一个函数的变量被称为闭包" class="headerlink" title="有权访问另一个函数的变量被称为闭包"></a>有权访问另一个函数的变量被称为闭包</h5>
                 
             </div>
             <hr/>
@@ -533,7 +470,7 @@ function Child(){
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://hmb0619.github.io/2022/04/20/js-ji-cheng/">http://hmb0619.github.io/2022/04/20/js-ji-cheng/</a>
+                    <a href="http://hmb0619.github.io/2022/05/05/bi-bao/">http://hmb0619.github.io/2022/05/05/bi-bao/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -744,9 +681,10 @@ function Child(){
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/05/05/bi-bao/">
                     <div class="card-image">
@@ -764,9 +702,59 @@ function Child(){
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-05
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JavaScript/" class="post-category">
+                                    JavaScript
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/04/20/js-ji-cheng/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="js继承">
+                        
+                        <span class="card-title">js继承</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -786,43 +774,6 @@ function Child(){
                         <span class="chip bg-color">JavaScript</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/10/26/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-26
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            little-tiger
-                            
-                        </span>
-                    </div>
                 </div>
                 
             </div>

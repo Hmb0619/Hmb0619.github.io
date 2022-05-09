@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>闭包</title>
+      <link href="/2022/05/05/bi-bao/"/>
+      <url>/2022/05/05/bi-bao/</url>
+      
+        <content type="html"><![CDATA[<h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><h5 id="有权访问另一个函数的变量被称为闭包"><a href="#有权访问另一个函数的变量被称为闭包" class="headerlink" title="有权访问另一个函数的变量被称为闭包"></a>有权访问另一个函数的变量被称为闭包</h5>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>js继承</title>
       <link href="/2022/04/20/js-ji-cheng/"/>
       <url>/2022/04/20/js-ji-cheng/</url>
